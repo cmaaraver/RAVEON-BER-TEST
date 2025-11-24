@@ -30,14 +30,14 @@ Fuente de alimentación (si no se alimentan por USB/DB9).
 
 Clonar el repositorio:
 
-```git clone [https://github.com/tu-usuario/raveon-ber-tester.git](https://github.com/tu-usuario/raveon-ber-tester.git)``` bash
-```cd raveon-ber-tester``` bash
+```git clone [https://github.com/tu-usuario/raveon-ber-tester.git](https://github.com/tu-usuario/raveon-ber-tester.git)``` 
+```cd raveon-ber-tester``` 
 
 
 Instalar dependencias:
 Este script requiere Python 3 y la librería pyserial.
 
-```pip install pyserial``` bash
+```pip install pyserial``` 
 
 
 Configuración Linux (Opcional):
