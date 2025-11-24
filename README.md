@@ -1,22 +1,22 @@
-# 📡 Raveon RV-M21 BER Tester & Auto-Configurator
+# Raveon RV-M21 BER Tester & Auto-Configurator
 
 Herramienta desarrollada en Python para la medición en tiempo real de la Tasa de Error de Bits (BER) y la configuración automática de frecuencias en radio módems Raveon Tech Series (RV-M21).
 
 Este proyecto automatiza el proceso de configuración mediante comandos AT y realiza un análisis de integridad de datos bit a bit, ideal para validar enlaces de radiofrecuencia (RF).
 
-📋 Características Principales
+ Características Principales
 
-🔌 Auto-Detección de Hardware: Escaneo automático de puertos seriales para identificar chips FTDI/Raveon sin intervención manual.
+ Auto-Detección de Hardware: Escaneo automático de puertos seriales para identificar chips FTDI/Raveon sin intervención manual.
 
-⚙️ Configuración Automática (AT): Inyecta la configuración de frecuencias cruzadas (Split Frequency) para establecer un enlace Full-Duplex o Half-Duplex simulado.
+ Configuración Automática (AT): Inyecta la configuración de frecuencias cruzadas (Split Frequency) para establecer un enlace Full-Duplex o Half-Duplex simulado.
 
-📉 Medición de BER en Tiempo Real: Cálculo preciso de errores utilizando comparación lógica XOR bit a bit.
+ Medición de BER en Tiempo Real: Cálculo preciso de errores utilizando comparación lógica XOR bit a bit.
 
-🔒 Sincronización Robusta: Implementación de cabeceras de sincronización (SYNC_HEADER) para recuperar tramas incluso en entornos ruidosos.
+ Sincronización Robusta: Implementación de cabeceras de sincronización (SYNC_HEADER) para recuperar tramas incluso en entornos ruidosos.
 
-🐧 Soporte Multiplataforma: Funciona nativamente en Windows y Linux (con gestión automática de permisos en /dev/ttyUSB).
+ Soporte Multiplataforma: Funciona nativamente en Windows y Linux (con gestión automática de permisos en /dev/ttyUSB).
 
-🛠️ Requisitos de Hardware
+ Requisitos de Hardware
 
 2x Radio Módems Raveon RV-M21 (o compatibles de la serie Tech).
 
@@ -26,7 +26,7 @@ PC/Laptop con puertos USB o Adaptadores Seriales.
 
 Fuente de alimentación (si no se alimentan por USB/DB9).
 
-🚀 Instalación
+ Instalación
 
 Clonar el repositorio:
 
@@ -51,7 +51,7 @@ sudo usermod -aG dialout $USER
 
 # O ejecuta el script con sudo temporalmente
 
-📖 Guía de Uso
+ Guía de Uso
 
 El sistema funciona con dos roles: Módem A y Módem B. El script configura las frecuencias cruzadas para que puedan comunicarse.
 
@@ -93,7 +93,7 @@ En una terminal: Opción 1 (Transmisor).
 
 En la otra terminal: Opción 2 (Receptor).
 
-🧠 ¿Cómo funciona el cálculo de BER?
+ ¿Cómo funciona el cálculo de BER?
 
 A diferencia de herramientas simples que solo cuentan paquetes perdidos, este software analiza la integridad de cada bit.
 
@@ -131,7 +131,7 @@ Resultado XOR: 00000001  --> 1 Bit Erróneo detectado
 BER = Total Bits Erróneos / Total Bits Recibidos
 ```
 
-📊 Ejemplo de Salida
+ Ejemplo de Salida
 
 En el Receptor:
 
@@ -144,7 +144,7 @@ Usando puerto: /dev/ttyUSB0
 [RX] Pkts: 151 | Err: 1 | BER: 0.000082
 ...
 
-⚠️ Solución de Problemas
+ Solución de Problemas
 
 "Permission denied" en Linux:
 El usuario no tiene acceso al puerto serial. Solución rápida:
@@ -165,6 +165,6 @@ EXIT
 
 pero si se interrumpió, reinicia el módem eléctricamente.
 
-👨‍💻 Autor: Carlos Maraver
+ Autor: Carlos Maraver
 
 Proyecto desarrollado para validación técnica de enlaces UHF/VHF.
