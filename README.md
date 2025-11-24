@@ -1,6 +1,6 @@
 # 📡 Raveon RV-M21 BER Tester & Auto-Configurator
 
-Herramienta de ingeniería desarrollada en Python para la medición en tiempo real de la Tasa de Error de Bits (BER) y la configuración automática de frecuencias en radio módems Raveon Tech Series (RV-M21).
+Herramienta desarrollada en Python para la medición en tiempo real de la Tasa de Error de Bits (BER) y la configuración automática de frecuencias en radio módems Raveon Tech Series (RV-M21).
 
 Este proyecto automatiza el proceso de configuración mediante comandos AT y realiza un análisis de integridad de datos bit a bit, ideal para validar enlaces de radiofrecuencia (RF).
 
