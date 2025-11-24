@@ -30,22 +30,26 @@ Fuente de alimentación (si no se alimentan por USB/DB9).
 
 Clonar el repositorio:
 
-```git clone [https://github.com/tu-usuario/raveon-ber-tester.git](https://github.com/tu-usuario/raveon-ber-tester.git)``` 
-```cd raveon-ber-tester``` 
-
+```bash
+git clone https://github.com/tu-usuario/raveon-ber-tester.git
+cd raveon-ber-tester
+```
 
 Instalar dependencias:
 Este script requiere Python 3 y la librería pyserial.
 
-```pip install pyserial``` 
-
+```bash
+pip install pyserial
+```
 
 Configuración Linux (Opcional):
 Si usas Linux y tienes problemas de permisos:
 
-```sudo usermod -aG dialout $USER```
-# O ejecuta el script con sudo temporalmente
+```bash
+sudo usermod -aG dialout $USER
+```
 
+# O ejecuta el script con sudo temporalmente
 
 📖 Guía de Uso
 
@@ -75,8 +79,9 @@ Paso 2: Ejecución
 
 Ejecuta el script en dos terminales diferentes (o dos PCs), una para cada módem.
 
+```bash
 python3 TEST_BER_RAVEON.py
-
+```
 
 El programa detectará el puerto COM/TTY automáticamente.
 
@@ -115,15 +120,16 @@ Si Bit_Recibido != Bit_Esperado → XOR es 1 (Error).
 
 Ejemplo:
 
-Esperado (5):  00000101
-Recibido (4):  00000100  <-- Error inducido por ruido RF
------------------------
+Esperado (5):  00000101  
+Recibido (4):  00000100  <-- Error inducido por ruido RF  
+-----------------------  
 Resultado XOR: 00000001  --> 1 Bit Erróneo detectado
-
 
 4. Fórmula Final
 
-$$BER = \frac{\text{Total Bits Erróneos}}{\text{Total Bits Recibidos}}$$
+```text
+BER = Total Bits Erróneos / Total Bits Recibidos
+```
 
 📊 Ejemplo de Salida
 
@@ -138,18 +144,26 @@ Usando puerto: /dev/ttyUSB0
 [RX] Pkts: 151 | Err: 1 | BER: 0.000082
 ...
 
-
 ⚠️ Solución de Problemas
 
 "Permission denied" en Linux:
 El usuario no tiene acceso al puerto serial. Solución rápida:
-```sudo chmod 666 /dev/ttyUSB0```
+
+```bash
+sudo chmod 666 /dev/ttyUSB0
+```
 
 BER del 50% (0.5):
 Significa que los datos son totalmente aleatorios. Verifica que ambos módems tengan la configuración de frecuencias cruzada (A vs B) y la misma velocidad (Baudrate).
 
 No se reciben datos:
-Asegúrate de haber salido del "Modo Comandos". El script lo hace automáticamente enviando EXIT, pero si se interrumpió, reinicia el módem eléctricamente.
+Asegúrate de haber salido del "Modo Comandos". El script lo hace automáticamente enviando el comando:
+
+```bash
+EXIT
+```
+
+pero si se interrumpió, reinicia el módem eléctricamente.
 
 👨‍💻 Autor: Carlos Maraver
 
