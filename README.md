@@ -31,19 +31,19 @@ Fuente de alimentación (si no se alimentan por USB/DB9).
 Clonar el repositorio:
 
 git clone [https://github.com/tu-usuario/raveon-ber-tester.git](https://github.com/tu-usuario/raveon-ber-tester.git)
-cd raveon-ber-tester
+```cd raveon-ber-tester```
 
 
 Instalar dependencias:
 Este script requiere Python 3 y la librería pyserial.
 
-pip install pyserial
+```pip install pyserial```
 
 
 Configuración Linux (Opcional):
 Si usas Linux y tienes problemas de permisos:
 
-sudo usermod -aG dialout $USER
+```sudo usermod -aG dialout $USER```
 # O ejecuta el script con sudo temporalmente
 
 
@@ -143,7 +143,7 @@ Usando puerto: /dev/ttyUSB0
 
 "Permission denied" en Linux:
 El usuario no tiene acceso al puerto serial. Solución rápida:
-sudo chmod 666 /dev/ttyUSB0
+```sudo chmod 666 /dev/ttyUSB0```
 
 BER del 50% (0.5):
 Significa que los datos son totalmente aleatorios. Verifica que ambos módems tengan la configuración de frecuencias cruzada (A vs B) y la misma velocidad (Baudrate).
@@ -151,6 +151,6 @@ Significa que los datos son totalmente aleatorios. Verifica que ambos módems te
 No se reciben datos:
 Asegúrate de haber salido del "Modo Comandos". El script lo hace automáticamente enviando EXIT, pero si se interrumpió, reinicia el módem eléctricamente.
 
-👨‍💻 Autor
+👨‍💻 Autor: Carlos Maraver
 
 Proyecto desarrollado para validación técnica de enlaces UHF/VHF.
